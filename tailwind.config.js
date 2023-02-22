@@ -13,6 +13,9 @@ module.exports = {
       colors: {
         "main-gray": "#f6f7fb",
       },
+      fontSize: {
+        "2xs": "0.6rem",
+      },
     },
   },
   plugins: [],
