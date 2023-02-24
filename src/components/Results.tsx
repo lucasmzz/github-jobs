@@ -8,7 +8,10 @@ const Results = ({ posts }) => {
       <div className="flex flex-col flex-nowrap gap-4">
         {posts &&
           posts.map((post) => (
-            <div className="flex flex-nowrap items-start justify-start gap-4 p-4 bg-white shadow-sm rounded-sm">
+            <div
+              key={post.id}
+              className="flex flex-nowrap items-start justify-start gap-4 p-4 bg-white shadow-sm rounded-sm"
+            >
               <Image
                 src={post.logo}
                 alt="logo"
