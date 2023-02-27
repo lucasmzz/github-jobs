@@ -1,10 +1,12 @@
+import Footer from "./Footer";
 import Header from "./Header";
 
 export default function Layout({ children }) {
   return (
-    <div className="bg-main-gray min-h-screen py-8 px-32">
+    <div className="flex flex-col bg-main-gray min-h-screen py-4 px-32">
       <Header />
-      <main>{children}</main>
+      <main className="grow">{children}</main>
+      <Footer />
     </div>
   );
 }
