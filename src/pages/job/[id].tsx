@@ -5,8 +5,10 @@ import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { ClockIcon } from "@heroicons/react/24/outline";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import { getDaysSincePost } from "@/utils/dateUtils";
+import { JobPost, PageJobDetailProps } from "@/types";
+import { GetServerSideProps } from "next";
 
-const JobDetail = ({ post }) => {
+const JobDetail = ({ post }: PageJobDetailProps) => {
   const { title, fulltime, created, company, logo, city, details } = post;
 
   return (
@@ -79,13 +81,13 @@ const JobDetail = ({ post }) => {
   );
 };
 
-export const getServerSideProps = async ({ query }) => {
+export const getServerSideProps: GetServerSideProps = async ({ query }) => {
   const res = await fetch(
     "https://6300ff309a1035c7f8fc2586.mockapi.io/jobposts"
   );
   const jobPosts = await res.json();
   const postId = query.id;
-  const post = jobPosts.find((post) => post.id === postId);
+  const post = jobPosts.find((post: JobPost) => post.id === postId);
 
   return {
     props: {

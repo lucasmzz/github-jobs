@@ -1,9 +1,10 @@
+import { SearchProps } from "@/types";
 import { BriefcaseIcon } from "@heroicons/react/24/outline";
 
 export default function Search({
   jobTitleSearchTerm,
   onJobTitleSearchTermChange,
-}) {
+}: SearchProps) {
   return (
     <div className="flex items-center justify-center rounded-lg h-36 bg-[url('../../public/images/bgsearch.png')] bg-no-repeat bg-cover bg-center mt-8">
       <div className="w-9/12 h-14 flex items-center bg-white rounded-lg relative">

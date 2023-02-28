@@ -3,8 +3,9 @@ import Link from "next/link";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 import { ClockIcon } from "@heroicons/react/24/outline";
 import { getDaysSincePost } from "@/utils/dateUtils";
+import { ResultsProps } from "@/types";
 
-const Results = ({ posts }) => {
+const Results = ({ posts }: ResultsProps) => {
   return (
     <div className="grow">
       <div className="flex flex-col flex-nowrap gap-4">

@@ -1,3 +1,4 @@
+import { FiltersProps } from "@/types";
 import { GlobeAltIcon } from "@heroicons/react/24/outline";
 
 export default function Filters({
@@ -8,7 +9,7 @@ export default function Filters({
   onSelectCity,
   onSelectFulltime,
   onLocationSearchTermChange,
-}) {
+}: FiltersProps) {
   return (
     <div className="w-1/3 flex flex-col gap-6">
       <div className="flex gap-2">
@@ -30,7 +31,7 @@ export default function Filters({
           <input
             className="pl-2 py-3 text-xs w-full outline-none"
             type="text"
-            placeholder="City, state, zip code or country"
+            placeholder="Type a city name..."
             name="input-location"
             id="input-location"
             value={locationSearchTerm}
